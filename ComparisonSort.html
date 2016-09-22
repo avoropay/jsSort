@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ComparisonSort</title>
+	<style type="text/css">
+		.sortArray {
+			width: 250px;
+			height: 500px;
+			display: inline-block;
+			margin-left: 20px;
+		}
+		.sortArray .barHswop {
+			background-color: red;
+		}
+		.barH {
+			background-color: blue;
+			height: 15px;
+			margin-bottom: 5px;
+			transition: width .5s ease;
+		}
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="Sort.js"></script>
+	<script type="text/javascript" src="AnimeDom.js"></script>
+</head>
+<body>
+<div id="canvas" width="800px" height="600px">
+	<div class="sortArray" id="ArrayBubble">
+		<div id="array1_row1" class="barH"></div>
+		<div id="array1_row2" class="barH"></div>
+		<div id="array1_row3" class="barH"></div>
+		<div id="array1_row4" class="barH"></div>
+		<div id="array1_row5" class="barH"></div>
+		<div id="array1_row6" class="barH"></div>
+		<div id="array1_row7" class="barH"></div>
+		<div id="array1_row8" class="barH"></div>
+		<div id="array1_row9" class="barH"></div>
+		<div id="array1_row10" class="barH"></div>
+		<div id="array1_row11" class="barH"></div>
+		<div id="array1_row12" class="barH"></div>
+		<div id="array1_row13" class="barH"></div>
+		<div id="array1_row14" class="barH"></div>
+		<div id="array1_row15" class="barH"></div>
+		<div id="array1_row16" class="barH"></div>
+		<div id="array1_row17" class="barH"></div>
+		<div id="array1_row18" class="barH"></div>
+		<div id="array1_row19" class="barH"></div>
+		<div id="array1_row20" class="barH"></div>
+		<div id="array1_row21" class="barH"></div>
+		<div id="array1_row22" class="barH"></div>
+		<div id="array1_row23" class="barH"></div>
+		<div id="array1_row24" class="barH"></div>
+		<div id="array1_row25" class="barH"></div>
+	</div>
+	<div class="sortArray" id="ArraySelection">
+		<div id="array2_row1" class="barH"></div>
+		<div id="array2_row2" class="barH"></div>
+		<div id="array2_row3" class="barH"></div>
+		<div id="array2_row4" class="barH"></div>
+		<div id="array2_row5" class="barH"></div>
+		<div id="array2_row6" class="barH"></div>
+		<div id="array2_row7" class="barH"></div>
+		<div id="array2_row8" class="barH"></div>
+		<div id="array2_row9" class="barH"></div>
+		<div id="array2_row10" class="barH"></div>
+		<div id="array2_row11" class="barH"></div>
+		<div id="array2_row12" class="barH"></div>
+		<div id="array2_row13" class="barH"></div>
+		<div id="array2_row14" class="barH"></div>
+		<div id="array2_row15" class="barH"></div>
+		<div id="array2_row16" class="barH"></div>
+		<div id="array2_row17" class="barH"></div>
+		<div id="array2_row18" class="barH"></div>
+		<div id="array2_row19" class="barH"></div>
+		<div id="array2_row20" class="barH"></div>
+		<div id="array2_row21" class="barH"></div>
+		<div id="array2_row22" class="barH"></div>
+		<div id="array2_row23" class="barH"></div>
+		<div id="array2_row24" class="barH"></div>
+		<div id="array2_row25" class="barH"></div>
+	</div>
+	<div class="sortArray" id="ArrayQuick">
+		<div id="array3_row1" class="barH"></div>
+		<div id="array3_row2" class="barH"></div>
+		<div id="array3_row3" class="barH"></div>
+		<div id="array3_row4" class="barH"></div>
+		<div id="array3_row5" class="barH"></div>
+		<div id="array3_row6" class="barH"></div>
+		<div id="array3_row7" class="barH"></div>
+		<div id="array3_row8" class="barH"></div>
+		<div id="array3_row9" class="barH"></div>
+		<div id="array3_row10" class="barH"></div>
+		<div id="array3_row11" class="barH"></div>
+		<div id="array3_row12" class="barH"></div>
+		<div id="array3_row13" class="barH"></div>
+		<div id="array3_row14" class="barH"></div>
+		<div id="array3_row15" class="barH"></div>
+		<div id="array3_row16" class="barH"></div>
+		<div id="array3_row17" class="barH"></div>
+		<div id="array3_row18" class="barH"></div>
+		<div id="array3_row19" class="barH"></div>
+		<div id="array3_row20" class="barH"></div>
+		<div id="array3_row21" class="barH"></div>
+		<div id="array3_row22" class="barH"></div>
+		<div id="array3_row23" class="barH"></div>
+		<div id="array3_row24" class="barH"></div>
+		<div id="array3_row25" class="barH"></div>
+	</div>
+</div>
+<div id="ButtonBar">
+	<button id="randomButton">Randomize Array</button>
+	<button id="startButton">Start Sort</button>
+</div>
+</body>
+</html>
