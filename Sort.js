@@ -62,45 +62,32 @@ function SelectionSort(A) {
 	}
 }
 
-/*function QuickSort(A, iLo, iHi) {
-var   Lo, Hi, Pivot, T;
-	{   Lo = iLo;   Hi = iHi;
-	Pivot = A[(Lo + Hi) div 2];
-	do
-		while (A[Lo] < Pivot) { Lo++;
-		while (A[Hi] > Pivot) { Hi--;
-		if (Lo <= Hi) {
-		{
-			T = A[Lo];
-			A[Lo] = A[Hi];
-			A[Hi] = T;
+function QuickSort(A, iLo, iHi) {
+	var Lo, Hi, Pivot, T;
+	Lo = iLo;
+	Hi = iHi;
+	Pivot = A[(Lo + Hi) % 2];
+	do {
+		while (A[Lo] < Pivot) {
 			Lo++;
-			Hi--;
+			while (A[Hi] > Pivot) {
+				Hi--;
+				if (Lo <= Hi) {
+					{
+						T = A[Lo];
+						A[Lo] = A[Hi];
+						A[Hi] = T;
+						Lo++;
+						Hi--;
+					}
+				}
+			}
 		}
-	 (Lo > Hi);
-	if (Hi > iLo) { QuickSort(A, iLo, Hi) };
-	if (Lo < iHi) { QuickSort(A, Lo, iHi) };
-end;
-
-/*
- procedure QuickSort(var A: array of Integer; iLo, iHi: Integer) ;
- var   Lo, Hi, Pivot, T: Integer;
- begin   Lo := iLo;   Hi := iHi;
- Pivot := A[(Lo + Hi) div 2];
- repeat
- while A[Lo] < Pivot do Inc(Lo) ;
- while A[Hi] > Pivot do Dec(Hi) ;
- if Lo <= Hi then
- begin
-        T := A[Lo];
-        A[Lo] := A[Hi];
-        A[Hi] := T;
-        Inc(Lo) ;
-        Dec(Hi) ;
-  end;
-  until Lo > Hi;
-  if Hi > iLo then QuickSort(A, iLo, Hi) ;
-  if Lo < iHi then QuickSort(A, Lo, iHi) ;
-  end;
- */
-
+	} while (Lo > Hi);
+	if (Hi > iLo) {
+		QuickSort(A, iLo, Hi);
+	}
+	if (Lo < iHi) {
+		QuickSort(A, Lo, iHi);
+	}
+}
