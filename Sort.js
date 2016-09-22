@@ -20,20 +20,6 @@ function fillArray() {
 
 }
 
-function VisualSwap(A, B, I, J, id) {
-
-	var nodeA = $("#" + id + I),
-		nodeB = $("#" + id + J);
-	nodeA.toggleClass("barHswop", true);
-	nodeB.toggleClass("barHswop", true);
-
-	nodeA.width(B);
-	nodeB.width(A);
-
-	nodeA.toggleClass("barHswop", false);
-	nodeB.toggleClass("barHswop", false);
-}
-
 function BubbleSort(A) {
 	var T, I, J, arrayLegnth = A.length;
 	for (I = arrayLegnth; I > 0; I--) {
