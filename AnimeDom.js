@@ -20,5 +20,6 @@ $(document).ready(function() {
 	$("#startButton").click(function () {
 		setTimeout(BubbleSort(ArrayBubble), 10);
 		setTimeout(SelectionSort(ArraySelection), 10);
+		setTimeout(QuickSort(ArrayQuick, 0, ArrayQuick.length-1), 10);
 	});
 });
